@@ -1,3 +1,31 @@
-23:24:18 **** Incremental Build of configuration Debug for project MPU6050_test ****
+00:03:47 **** Incremental Build of configuration Debug for project MPU6050_test ****
+make -j4 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+D:\GIT\GitHub\STM32_I2C_MPU6050\MPU6050_test\Debug
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -DSTM32 -DSTM32F1 -DSTM32F103C8Tx -DDEBUG -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -I"D:/GIT/GitHub/STM32_I2C_MPU6050/MPU6050_test/StdPeriph_Driver/inc" -I"D:/GIT/GitHub/STM32_I2C_MPU6050/MPU6050_test/inc" -I"D:/GIT/GitHub/STM32_I2C_MPU6050/MPU6050_test/CMSIS/device" -I"D:/GIT/GitHub/STM32_I2C_MPU6050/MPU6050_test/CMSIS/core" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'I2C1_ER_IRQHandler':
+../src/main.c:19:22: warning: unused variable 'temp_SR1' [-Wunused-variable]
+       unsigned short temp_SR1 = I2C1->SR1;
+                      ^~~~~~~~
+../src/main.c: In function 'I2C1_EV_IRQHandler':
+../src/main.c:29:22: warning: unused variable 'temp_SR1' [-Wunused-variable]
+       unsigned short temp_SR1 = I2C1->SR1;
+                      ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: MPU6050_test.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m3 -mthumb -mfloat-abi=soft -T"D:/GIT/GitHub/STM32_I2C_MPU6050/MPU6050_test/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "MPU6050_test.elf" @"objects.list"   -lm
+Finished building target: MPU6050_test.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "MPU6050_test.elf" "MPU6050_test.bin"
+arm-none-eabi-size "MPU6050_test.elf"
+   text	   data	    bss	    dec	    hex	filename
+   3952	   1104	   1108	   6164	   1814	MPU6050_test.elf
+ 
+00:03:54 **** Incremental Build of configuration Debug for project MPU6050_test ****
 make -j4 all 
 make: Nothing to be done for 'all'.
