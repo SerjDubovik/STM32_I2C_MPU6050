@@ -1,0 +1,14 @@
+#include "stm32f10x.h"
+#include "main.h"
+#include "system.h"
+
+int main(void)
+{
+
+	//TODO loop
+	for(;;)
+	{
+
+	}// скобочка бесконечного цикла
+
+}// скобочка мейна
